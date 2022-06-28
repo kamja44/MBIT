@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body{
+    background-color: #FAF1BE;
+    color: #000000;
+    font-family: "NEXON Lv1 Gothic OTF";
+  }
+  button {
+    font-family: "NEXON Lv1 Gothic OTF";
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  button:hover{
+    text-decoration: underline;
+  }
+  #main_contents{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+  }
+  #main_contents .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    padding-bottom: 50px;
+  }
+  .result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .result h1{
+    font-size: 50px;
+    font-family: "GmarketSansBold";
+  }
+  .result h3{
+    font-size: 17px;
+    padding-bottom: 15px;
+  }
+  .result_img{
+    width: 300px;
+    height: 324px; 
+  }
+
+  .result_img img{
+    width: 100%;
+    height: 100%;
+  }
+  .result_explains{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    line-height: 1.5;
+  }
+  .result_explains .explain{
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  .result_explains .explain .title{
+    font-family: "GmarketSansBold";
+    font-size: 20px;
+    text-align: center;
+    border-top: 3px solid #EA7E7C;
+    border-bottom: 3px solid #EA7E7C;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+  }
+  .result_explains .explain ul{
+    padding: 0 20px;
+    list-style-type: disc;
+  }
+  .result_explains .explain ul li{
+    padding-bottom: 15px;
+  }
+  .lectures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #EA7E7C;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+  }
+  .lectures .title{
+    text-align: center;
+    width: 400px;
+    font-size: 30px;
+    font-family: "GmarketSansBold";
+    color: #EA7E7C;
+    position: relative;
+  }
+  /* 
+    .lectures .title의 before(앞), after(뒤)에 원하는 값을 추가할 수 있다.
+  */
+  .lectures .title:before{
+    left: 0;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #EA7E7C;
+    position: absolute;
+  }
+  .lectures .title:after{
+    right: 0;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #EA7E7C;
+    position: absolute;
+  }
+  .lectures p{
+    pad: 50px 0;
+    line-height: 1.5;
+  }
+  .lectures ul{
+    width: 400px;
+  }
+  .lectures li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pad: 30px;
+  }
+  .lectures a{
+    cursor: pointer;
+    text-decoration: none;
+    /* inherit -> 부모태그로부터 상속받는다. */
+    color: inherit;
+    overflow: hidden;
+  }
+  .lectures a:hover img{
+    /* .lectures a태그에 마우스를 hover(올렸을 때) img가 1.1배(scaled(1.1)) 커지는 애니메이션을 적용한다 */
+    /* scaled -> 크기, translate -> 방향(x축, y축), rotate -> 방향(degree) */
+    /* transition -> 애니메이션 시간 설정 */
+    transform: scale(1.05);
+    /* transition: all 2s; */
+  }
+  .lectures a:hover button{
+    text-decoration: underline;
+  }
+  .lectures li img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    transition: transform .5s;
+  }
+  .lectures li h3{
+    font-family: "GmarketSansBold";
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px 20px;
+    /* padding : 0 10px 20px == padding : 0 10px 20px 0 */
+  }
+  .lectures li button{
+    background-color: #7F47DD;
+    color: #FFFFFF;
+  }
+  .share{
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #EA7E7C;
+  }
+  .share button{
+    margin-bottom: 30px;
+  }
+  .facebook_share{
+    background-color: #3b5998;
+    color: #ffffff;
+  }
+  .kakao_share{
+    background-color: #f1d900;
+  }
+  .buttons{
+    padding-bottom: 50px;
+  }
+  .buttons h3{
+    padding-bottom: 20px;
+  }
+  .buttons button{
+    margin-bottom: 30px;
+  }
+  .jejucodingbasecamp_color{
+    background-color: #7F47DD;
+    color: #ffffff;
+  }
+  .weniv {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  
+  .weniv a {
+    width: 100px;
+  }
+  
+  .weniv img {
+    width: 100%;
+    height: auto;
+  }
+  .weniv p{
+    padding-top: 20px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.5;
+  }
