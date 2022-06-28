@@ -14,10 +14,12 @@ function scrollDown(){
 
 $(function(){
     $(".next_btn").click(function(e){
-        // if(inputs.length < 1){
-        //     alert("문항을 선택해주세요");
-        //     return false;
-        // }
+        let divs = $(this).parent().prev().children();
+        let inputs = divs.find("input:checked");
+        if(inputs.length < 1){
+            alert("문항을 선택해주세요");
+            return false;
+        }
         e.preventDefault();
         scrollDown();
     });
@@ -27,8 +29,9 @@ $(function(){
         scrollUp();
     });
 
-    $(".submit_btn").click(function(e){
-        // let radios=  $("input[type=radio]:checked");
+    $(".submit_btn").submit(function(e){
+        let radios=  $("input[type=radio]:checked");
+        console.log(radios.length);
         // if(radios.length<3){
         //     alert("문항이 선택되지 않았습니다.");
         //     return false;
@@ -36,6 +39,6 @@ $(function(){
     });
 
     $("html, body").animate({
-
-    });
+            scrollTop : 0       
+    }, 500);
 })
